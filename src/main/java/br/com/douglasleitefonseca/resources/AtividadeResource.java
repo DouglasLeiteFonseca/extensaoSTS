@@ -1,14 +1,15 @@
+package br.com.douglasleitefonseca.resources;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value='/atividades')
+@RequestMapping(value="/atividades")
 public class AtividadeResource {
 
-	@RequestMapping(method=RequestMethod.GET);
+	@RequestMapping(method=RequestMethod.GET)
 	public String listar() {
-		return 'REST OK';
+		return "REST OK";
 	}
 	
 }
