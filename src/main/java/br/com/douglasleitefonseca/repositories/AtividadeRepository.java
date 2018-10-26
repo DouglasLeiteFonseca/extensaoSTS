@@ -10,6 +10,6 @@ import br.com.douglasleitefonseca.domain.Atividade;
 
 @Repository
 public interface AtividadeRepository extends JpaRepository<Atividade,Integer>{
-	public List<Atividade> findByNomeContaining(@Param("nome") String nome);
+	public List<Atividade> findByNomeContainingIgnoreCase(@Param("nome") String nome);
 	public Atividade getById(@Param("id") Integer id);
 }

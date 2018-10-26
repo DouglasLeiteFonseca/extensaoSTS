@@ -1,10 +1,5 @@
 package br.com.douglasleitefonseca.repositories;
 
-
-
-
-
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.List;
@@ -23,7 +18,7 @@ import br.com.douglasleitefonseca.domain.Atividade;
 @SpringBootTest
 
 public class AtividadeRepositoryTest {
-	@Autowired
+	@Autowired	
 	public AtividadeRepository repo;
 	
 	@Test
@@ -34,15 +29,10 @@ public class AtividadeRepositoryTest {
 	}
 	@Test
 	public void findByNome() {
-		List<Atividade> atividades = this.repo.findByNomeContaining("Teste dado 1");
+		List<Atividade> atividades = this.repo.findByNomeContainingIgnoreCase("POS DE ADS teste cri");
 		assertThat(atividades.size()).isEqualTo(1);
 	}
 	
-	@Test
-	public void find() {
-		List<Atividade> atividades = this.repo.findByNomeContaining("teste");
-		assertThat(atividades.size()).isEqualTo(0);
-	}
 	
 	
 }
